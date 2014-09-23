@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "JIRA Smart Filter",
+  "author": "Dan Deng",
+  "description": "This improves the JIRA user experience by allowing users to toggle between Quick Filters",
+  "version": "1.0",
+  "permissions": [ "https://jira01.corp.linkedin.com" ],
+  "content_scripts": [{
+    "matches": ["https://jira01.corp.linkedin.com:8443/*"],
+    "js": ["jquery.js", "app.js"],
+    "run_at": "document_idle"
+  }]
+}
